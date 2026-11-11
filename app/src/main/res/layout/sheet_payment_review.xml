@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/bg_sheet_handle" />
+
+    <TextView
+        style="@style/Text.Rescate.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Revisar pago Yape" />
+
+    <TextView
+        android:id="@+id/tvState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_card_yape"
+        android:padding="14dp"
+        android:text="Operación de Yape reportada · Pendiente de verificación manual"
+        android:textColor="@color/yape"
+        android:textStyle="bold" />
+
+    <include
+        android:id="@+id/rowClient"
+        layout="@layout/view_info_row" />
+
+    <include
+        android:id="@+id/rowAmount"
+        layout="@layout/view_info_row" />
+
+    <include
+        android:id="@+id/rowRef"
+        layout="@layout/view_info_row" />
+
+    <include
+        android:id="@+id/rowProduct"
+        layout="@layout/view_info_row" />
+
+    <TextView
+        style="@style/Text.Rescate.Muted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Revisa tu aplicación Yape antes de aprobar." />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnApprove"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Aprobar pago" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnReject"
+        style="@style/Widget.Rescate.Button.Outlined"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Rechazar operación"
+        android:textColor="@color/red" />
+</LinearLayout>

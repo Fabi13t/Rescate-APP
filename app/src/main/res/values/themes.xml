@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.Rescate" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/green_800</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/mint_100</item>
+        <item name="colorOnPrimaryContainer">@color/green_900</item>
+        <item name="colorSecondary">@color/green_600</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/mint_100</item>
+        <item name="colorOnSecondaryContainer">@color/green_900</item>
+        <item name="colorTertiary">@color/amber</item>
+        <item name="colorError">@color/red</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/ink</item>
+        <item name="colorSurfaceVariant">@color/mint_50</item>
+        <item name="colorOnSurfaceVariant">@color/ink_muted</item>
+        <item name="colorOutline">@color/outline</item>
+        <item name="android:colorBackground">@color/bg</item>
+        <item name="android:windowBackground">@color/bg</item>
+
+        <item name="materialButtonStyle">@style/Widget.Rescate.Button</item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.Rescate.Button.Outlined</item>
+        <item name="textInputStyle">@style/Widget.Rescate.TextInput</item>
+        <item name="chipStyle">@style/Widget.Rescate.Chip</item>
+        <item name="materialCardViewStyle">@style/Widget.Rescate.Card</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Rescate.BottomSheet</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.Rescate.Dialog</item>
+        <item name="sliderStyle">@style/Widget.Rescate.Slider</item>
+    </style>
+
+    
+    <style name="Theme.Rescate" parent="Base.Theme.Rescate">
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/bg</item>
+    </style>
+
+    
+    <style name="Theme.Rescate.Main" parent="Base.Theme.Rescate">
+        <item name="android:statusBarColor">@color/green_800</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/surface</item>
+    </style>
+
+    
+    <style name="Theme.Rescate.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/green_800</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo</item>
+        <item name="windowSplashScreenAnimationDuration">600</item>
+        <item name="postSplashScreenTheme">@style/Theme.Rescate</item>
+    </style>
+
+    <style name="ThemeOverlay.Rescate.BottomSheet" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.Rescate.BottomSheet</item>
+    </style>
+
+    <style name="Widget.Rescate.BottomSheet" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="backgroundTint">@color/surface</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Rescate.Sheet</item>
+    </style>
+
+    <style name="ShapeAppearance.Rescate.Sheet" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">28dp</item>
+        <item name="cornerSizeTopRight">28dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <style name="ThemeOverlay.Rescate.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Rescate.Large</item>
+        <item name="colorSurface">@color/surface</item>
+    </style>
+
+    <style name="ShapeAppearance.Rescate.Large" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">24dp</item>
+    </style>
+</resources>

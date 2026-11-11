@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_merchant"
+    app:startDestination="@id/mHomeFragment">
+
+    <fragment
+        android:id="@+id/mHomeFragment"
+        android:name="com.rescate.app.ui.merchant.MerchantHomeFragment" />
+    <fragment
+        android:id="@+id/mOrdersFragment"
+        android:name="com.rescate.app.ui.merchant.OrdersFragment" />
+    <fragment
+        android:id="@+id/mNewPackFragment"
+        android:name="com.rescate.app.ui.merchant.NewPackFragment" />
+    <fragment
+        android:id="@+id/mPaymentsFragment"
+        android:name="com.rescate.app.ui.merchant.PaymentsFragment" />
+    <fragment
+        android:id="@+id/mProfileFragment"
+        android:name="com.rescate.app.ui.merchant.MerchantProfileFragment">
+        <action
+            android:id="@+id/toFeedback"
+            app:destination="@id/merchantFeedbackFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/merchantFeedbackFragment"
+        android:name="com.rescate.app.ui.feedback.MerchantFeedbackFragment" />
+</navigation>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/screen_padding">
+
+        <TextView
+            style="@style/Text.Rescate.Display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mi perfil" />
+
+        <LinearLayout
+            android:id="@+id/headerCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvAvatar"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/bg_circle_mint"
+                android:gravity="center"
+                android:text="EP"
+                android:textColor="@color/green_800"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eduardo Palomino"
+                    android:textColor="@color/ink"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    style="@style/Text.Rescate.Muted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="correo@ejemplo.com" />
+
+                <TextView
+                    android:id="@+id/tvDistrict"
+                    style="@style/Text.Rescate.Badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/bg_badge_green"
+                    android:text="Los Olivos"
+                    android:textColor="@color/green_800" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/statsRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_card_mint"
+            android:orientation="horizontal"
+            android:padding="14dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvStatReservations"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:textColor="@color/green_900"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/Text.Rescate.Muted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reservas" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvStatKg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18.6"
+                    android:textColor="@color/green_900"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/Text.Rescate.Muted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="kg rescatados" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvStatDonations"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textColor="@color/green_900"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/Text.Rescate.Muted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Donaciones" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menuCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card_white"
+            android:orientation="vertical"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
+                <TextView
+                    android:id="@+id/rowEdit"
+                    style="@style/Rescate.Row"
+                    android:text="Editar mis datos"
+                    app:drawableEndCompat="@drawable/ic_chevron_right"
+                    app:drawableStartCompat="@drawable/ic_edit" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="56dp"
+                    android:background="@color/outline" />
+
+                <TextView
+                    android:id="@+id/rowFavorites"
+                    style="@style/Rescate.Row"
+                    android:text="Packs favoritos"
+                    app:drawableEndCompat="@drawable/ic_chevron_right"
+                    app:drawableStartCompat="@drawable/ic_favorite_border" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="56dp"
+                    android:background="@color/outline" />
+
+                <TextView
+                    android:id="@+id/rowDonate"
+                    style="@style/Rescate.Row"
+                    android:text="Donar alimentos"
+                    app:drawableEndCompat="@drawable/ic_chevron_right"
+                    app:drawableStartCompat="@drawable/ic_gift" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="56dp"
+                    android:background="@color/outline" />
+
+                <TextView
+                    android:id="@+id/rowDonations"
+                    style="@style/Rescate.Row"
+                    android:text="Mis donaciones"
+                    app:drawableEndCompat="@drawable/ic_chevron_right"
+                    app:drawableStartCompat="@drawable/ic_eco" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menuCard2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_card_white"
+            android:orientation="vertical"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
+                <TextView
+                    android:id="@+id/rowSettings"
+                    style="@style/Rescate.Row"
+                    android:text="Ajustes y notificaciones"
+                    app:drawableEndCompat="@drawable/ic_chevron_right"
+                    app:drawableStartCompat="@drawable/ic_settings" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="56dp"
+                    android:background="@color/outline" />
+
+                <TextView
+                    android:id="@+id/rowPrivacy"
+                    style="@style/Rescate.Row"
+                    android:text="Privacidad y seguridad"
+                    app:drawableEndCompat="@drawable/ic_chevron_right"
+                    app:drawableStartCompat="@drawable/ic_shield" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="56dp"
+                    android:background="@color/outline" />
+
+                <TextView
+                    android:id="@+id/rowComplaints"
+                    style="@style/Rescate.Row"
+                    android:text="Libro de reclamaciones"
+                    app:drawableEndCompat="@drawable/ic_chevron_right"
+                    app:drawableStartCompat="@drawable/ic_assignment" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="56dp"
+                    android:background="@color/outline" />
+
+                <TextView
+                    android:id="@+id/rowHelp"
+                    style="@style/Rescate.Row"
+                    android:text="Ayuda y soporte"
+                    app:drawableEndCompat="@drawable/ic_chevron_right"
+                    app:drawableStartCompat="@drawable/ic_help" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogout"
+            style="@style/Widget.Rescate.Button.Outlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Cerrar sesión"
+            android:textColor="@color/red"
+            app:icon="@drawable/ic_logout"
+            app:iconGravity="textStart"
+            app:iconTint="@color/red" />
+
+        <TextView
+            android:id="@+id/tvVersion"
+            style="@style/Text.Rescate.Muted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="Rescate v1.0" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

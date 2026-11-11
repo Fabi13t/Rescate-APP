@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="green_900">#123326</color>
+    <color name="green_800">#1C4434</color>
+    <color name="green_700">#255A44</color>
+    <color name="green_600">#2F7556</color>
+    <color name="green_500">#3D9169</color>
+    <color name="mint_200">#CFE5D7</color>
+    <color name="mint_100">#E2EFE6</color>
+    <color name="mint_50">#EFF6F1</color>
+
+    <color name="bg">#F6F7F3</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="ink">#14231B</color>
+    <color name="ink_muted">#68756D</color>
+    <color name="ink_soft">#9AA59F</color>
+    <color name="outline">#E3E8E2</color>
+
+    <color name="amber">#D9922B</color>
+    <color name="amber_bg">#FFF3D9</color>
+    <color name="red">#D14B42</color>
+    <color name="red_bg">#FCE9E7</color>
+    <color name="yape">#6C2483</color>
+    <color name="yape_bg">#F2E8F6</color>
+
+    
+    <color name="logo_tan">#E8B460</color>
+    <color name="logo_peach">#F0B9A0</color>
+    <color name="logo_green">#9CC59A</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="scrim">#66000000</color>
+    <color name="white_15">#26FFFFFF</color>
+    <color name="white_70">#B3FFFFFF</color>
+</resources>

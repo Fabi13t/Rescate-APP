@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/screen_padding">
+
+        <TextView
+            style="@style/Text.Rescate.Display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mi comercio" />
+
+        <LinearLayout
+            android:id="@+id/headerCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card_white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <FrameLayout
+                android:id="@+id/storeAvatar"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:background="@drawable/bg_circle_mint">
+
+                <ImageView
+                    android:id="@+id/ivStorePhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="27dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_store"
+                    app:tint="@color/green_800" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvStore"
+                style="@style/Text.Rescate.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Panadería Don Pedro" />
+
+            <TextView
+                android:id="@+id/tvOwner"
+                style="@style/Text.Rescate.Muted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Responsable: Pedro Quispe" />
+
+            <TextView
+                android:id="@+id/tvVerified"
+                style="@style/Text.Rescate.Badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_badge_green"
+                android:text="✓ Verificado"
+                android:textColor="@color/green_800" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menuCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card_white"
+            android:orientation="vertical"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
+
+            <TextView
+                android:id="@+id/rowRatings"
+                style="@style/Rescate.Row"
+                android:text="Calificaciones"
+                app:drawableEndCompat="@drawable/ic_chevron_right"
+                app:drawableStartCompat="@drawable/ic_star" />
+
+            <TextView
+                android:id="@+id/rowComplaints"
+                style="@style/Rescate.Row"
+                android:text="Reclamos recibidos"
+                app:drawableEndCompat="@drawable/ic_chevron_right"
+                app:drawableStartCompat="@drawable/ic_assignment" />
+
+            <TextView
+                android:id="@+id/rowYape"
+                style="@style/Rescate.Row"
+                android:text="Configurar Yape"
+                app:drawableEndCompat="@drawable/ic_chevron_right"
+                app:drawableStartCompat="@drawable/ic_wallet" />
+
+            <TextView
+                android:id="@+id/rowAddress"
+                style="@style/Rescate.Row"
+                android:text="Dirección y horario"
+                app:drawableEndCompat="@drawable/ic_chevron_right"
+                app:drawableStartCompat="@drawable/ic_place" />
+
+            <TextView
+                android:id="@+id/rowDocs"
+                style="@style/Rescate.Row"
+                android:text="Documento (RUC / DNI)"
+                app:drawableEndCompat="@drawable/ic_chevron_right"
+                app:drawableStartCompat="@drawable/ic_badge" />
+
+            <TextView
+                android:id="@+id/rowHelp"
+                style="@style/Rescate.Row"
+                android:text="Centro de ayuda"
+                app:drawableEndCompat="@drawable/ic_chevron_right"
+                app:drawableStartCompat="@drawable/ic_help" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogout"
+            style="@style/Widget.Rescate.Button.Danger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Cerrar sesión"
+            app:icon="@drawable/ic_logout"
+            app:iconGravity="textStart" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

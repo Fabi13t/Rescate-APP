@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="32dp"
+    android:paddingBottom="32dp">
+
+    <ImageView
+        android:id="@+id/ivEmpty"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/empty_busqueda" />
+
+    <TextView
+        android:id="@+id/tvEmptyTitle"
+        style="@style/Text.Rescate.Section"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Sin resultados cercanos" />
+
+    <TextView
+        android:id="@+id/tvEmptyBody"
+        style="@style/Text.Rescate.Muted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center"
+        android:text="Prueba ampliando la distancia o cambiando de categoría." />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEmptyAction"
+        style="@style/Widget.Rescate.Button.Outlined"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:minHeight="44dp"
+        android:text="Quitar filtros" />
+</LinearLayout>

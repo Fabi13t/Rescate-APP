@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/homeFragment">
+
+    
+    <action
+        android:id="@+id/toDetail"
+        app:destination="@id/packDetailFragment"
+        app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    <action
+        android:id="@+id/toVoucher"
+        app:destination="@id/voucherFragment"
+        app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    <action
+        android:id="@+id/toDonate"
+        app:destination="@id/donateFragment"
+        app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/toComplaintForm"
+        app:destination="@id/complaintFormFragment"
+        app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    <action
+        android:id="@+id/toComplaints"
+        app:destination="@id/complaintsFragment"
+        app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.rescate.app.ui.home.HomeFragment">
+        <action
+            android:id="@+id/toSearch"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/fade_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/toNotifications"
+            app:destination="@id/notificationsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.rescate.app.ui.home.SearchFragment">
+        <argument
+            android:name="favorites"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <argument
+            android:name="category"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.rescate.app.ui.home.NotificationsFragment" />
+
+    <fragment
+        android:id="@+id/packDetailFragment"
+        android:name="com.rescate.app.ui.detail.PackDetailFragment">
+        <argument
+            android:name="packId"
+            app:argType="long" />
+        <action
+            android:id="@+id/toReserve"
+            app:destination="@id/reserveFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.rescate.app.ui.map.MapFragment" />
+
+    <fragment
+        android:id="@+id/reserveFragment"
+        android:name="com.rescate.app.ui.reserve.ReserveFragment">
+        <action
+            android:id="@+id/toHold"
+            app:destination="@id/holdFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/holdFragment"
+        android:name="com.rescate.app.ui.reserve.HoldFragment">
+        <action
+            android:id="@+id/toYape"
+            app:destination="@id/yapeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/yapeFragment"
+        android:name="com.rescate.app.ui.reserve.YapeFragment" />
+
+    <fragment
+        android:id="@+id/voucherFragment"
+        android:name="com.rescate.app.ui.reserve.VoucherFragment" />
+
+    <fragment
+        android:id="@+id/reservationsFragment"
+        android:name="com.rescate.app.ui.reservations.ReservationsFragment" />
+
+    <fragment
+        android:id="@+id/impactFragment"
+        android:name="com.rescate.app.ui.impact.ImpactFragment" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.rescate.app.ui.profile.ProfileFragment">
+        <action
+            android:id="@+id/toEditProfile"
+            app:destination="@id/editProfileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/toSettings"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/toHelp"
+            app:destination="@id/helpFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/toMyDonations"
+            app:destination="@id/myDonationsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/toFavorites"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.rescate.app.ui.profile.EditProfileFragment" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.rescate.app.ui.profile.SettingsFragment" />
+
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.rescate.app.ui.profile.HelpFragment" />
+
+    <fragment
+        android:id="@+id/donateFragment"
+        android:name="com.rescate.app.ui.donation.DonateFragment">
+        <action
+            android:id="@+id/toMyDonations"
+            app:destination="@id/myDonationsFragment"
+            app:popUpTo="@id/donateFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myDonationsFragment"
+        android:name="com.rescate.app.ui.donation.MyDonationsFragment" />
+
+    <fragment
+        android:id="@+id/complaintsFragment"
+        android:name="com.rescate.app.ui.feedback.ComplaintsFragment" />
+
+    <fragment
+        android:id="@+id/complaintFormFragment"
+        android:name="com.rescate.app.ui.feedback.ComplaintFormFragment" />
+</navigation>

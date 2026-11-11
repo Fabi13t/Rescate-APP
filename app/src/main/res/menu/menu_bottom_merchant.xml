@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/mHomeFragment" android:icon="@drawable/ic_home" android:title="Inicio" />
+    <item android:id="@+id/mOrdersFragment" android:icon="@drawable/ic_cart" android:title="Pedidos" />
+    <item android:id="@+id/mNewPackFragment" android:icon="@drawable/ic_add_circle" android:title="Nuevo pack" />
+    <item android:id="@+id/mPaymentsFragment" android:icon="@drawable/ic_wallet" android:title="Pagos" />
+    <item android:id="@+id/mProfileFragment" android:icon="@drawable/ic_store" android:title="Perfil" />
+</menu>

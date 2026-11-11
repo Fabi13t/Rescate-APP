@@ -1,0 +1,21 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/app/build
+/captures
+.externalNativeBuild
+.cxx
+
+# Credenciales y archivos sensibles
+.env
+*.env
+backend/.env
+*.jks
+*.keystore
+google-services.json
+backend/node_modules
+backend/uploads/*
+!backend/uploads/.gitkeep
