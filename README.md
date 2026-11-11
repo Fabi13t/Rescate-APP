@@ -5,18 +5,24 @@ App nativa en **Kotlin + XML Views + ViewBinding + Material 3**, basada en el Fi
 
 ## Cómo abrirlo en Android Studio
 
-1. Descomprime el `.zip`.
-2. Android Studio → **File › Open** → elige la carpeta `Rescate` (la que tiene `settings.gradle.kts`).
+1. Clona el repositorio:
+   ```
+   git clone https://github.com/Fabi13t/Rescate-APP.git
+   ```
+   O en GitHub: **Code › Download ZIP** y descomprímelo.
+2. Android Studio → **File › Open** → elige la carpeta `Rescate-APP` (la que tiene `settings.gradle.kts`).
 3. Espera a que termine **Gradle Sync** (la primera vez descarga dependencias, necesita internet).
 4. Elige un emulador (API 24 o superior; recomendado API 34/35) y pulsa ▶ **Run**.
 
 > Requisitos: Android Studio Ladybug (2024.2) o más reciente, JDK 17 (viene incluido en Android Studio).
 > Si Android Studio sugiere actualizar el *Android Gradle Plugin*, puedes aceptar.
+> Si aparece "SDK location not found", Android Studio crea `local.properties` solo al abrir el proyecto;
+> ese archivo no se sube al repositorio.
 
 ## Qué incluye el proyecto
 
 ```
-Rescate/
+Rescate-APP/
 ├── app/        ← App Android (Kotlin + XML + ViewBinding + Material 3)
 └── backend/    ← API Node.js + Express + PostgreSQL (23 tablas)  → ver backend/README.md
 ```
@@ -57,6 +63,35 @@ Sigue `backend/README.md` (base de datos en Neon + API en Render o en tu PC). Lu
 2. `API_BASE_URL`: `http://10.0.2.2:3000/api/v1/` (API en tu PC) o `https://TU-APP.onrender.com/api/v1/` (nube).
 3. Las rutas esperadas están en `data/remote/ApiService.kt`. El token JWT se agrega solo
    (interceptor en `ApiClient.kt`) y los errores 401 · 409 · 410 · 422 se convierten en mensajes de pantalla.
+
+## Pruebas
+
+| Tipo | Dónde | Cómo ejecutarlas |
+| --- | --- | --- |
+| Unitarias (JUnit, 16) | `app/src/test` | Clic derecho en `com.rescate.app (test)` › Run, o `./gradlew test` |
+| Interfaz (Espresso, 2) | `app/src/androidTest` | Con el emulador encendido: clic derecho en `LoginFlowTest` › Run |
+| API (node:test, 10) | `backend/test/api.test.js` | `cd backend` y `npm test` (necesita PostgreSQL y el `.env`) |
+
+> Para Espresso, desactiva las animaciones del emulador: Ajustes › Sistema › Opciones para desarrolladores ›
+> Escala de animación de ventana, de transición y de duración de animador en **Desactivada**.
+
+## Seguridad de credenciales
+
+- Las claves (`DATABASE_URL`, `JWT_SECRET`) van en `backend/.env` o en Render, nunca en el código.
+- En el repositorio solo está `backend/.env.example` con valores de ejemplo: cópialo como `.env` y complétalo.
+- El `.gitignore` excluye `.env`, `*.jks`, `*.keystore`, `local.properties`, `build/` y `node_modules/`.
+
+## Ramas y commits
+
+| Rama | Uso |
+| --- | --- |
+| `main` | Versiones estables y entregas |
+| `develop` | Integración de los cambios |
+| `feature/<tema>` | Una función nueva; entra a `develop` con Pull Request |
+
+Los commits siguen el formato `tipo(módulo): descripción`, por ejemplo `feat(reservas): retención de 3 min`,
+`fix(login): mensaje con correo vacío` o `docs: pasos para clonar y abrir el proyecto`.
+Tipos: `feat`, `fix`, `test`, `docs`, `refactor`, `chore`.
 
 ## Arquitectura (igual al diagrama)
 
